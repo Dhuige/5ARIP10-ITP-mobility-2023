@@ -51,8 +51,8 @@ class SPSA(HighDData, AimsunData):
         [n2, _] = histogram(q, bins=bins, range=[lb, ub])
 
         # normalize the counts:
-        n1 = n1/sum(p)
-        n2 = n2/sum(q)
+        n1 = n1/len(p)
+        n2 = n2/len(q)
 
         # Replace zeros with small number to avoid nan and inf values
         n1[n1==0] = epsilon
